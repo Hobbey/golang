@@ -6,11 +6,11 @@ func BinarySearch(arr []int, val int) (index int) {
 	// todo: 增加数据是否顺序的检查
 
 	// ....(负无穷).... 0 1 2 3 4 5 6 7 ....(正无穷)....
-	// 先排除掉 有限数组arr 两侧到 -∞ 和 +∞ 之间的广阔空间
+	// 先排除掉 从"有限数组arr"的两端 到"-∞"和"+∞"之间的广阔空间
 	low := 0
 	high := len(arr) - 1
 	if len(arr) == 0 || arr[low] > val || arr[high] < val {
-		fmt.Println("Value out of range")
+		fmt.Println("Array not valid or given value out of range")
 		return -1
 	}
 
