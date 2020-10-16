@@ -14,7 +14,7 @@ TEST CASE 1, Search 14 in array [11 14 19 20 31 45 63 70 78]
 arr[0] < 14, Target on Right: (0,1] ==> [1,1]
 for loop Exit
 **********************
-Value found
+Value found, return index = 1
 
 TEST CASE 2, Search 71 in array [11 14 19 20 31 45 63 70 78]
 --------------------
@@ -28,12 +28,12 @@ arr[6] < 71, Target on Right: (6,8] ==> [7,8]
 arr[7] < 71, Target on Right: (7,8] ==> [8,8]
 for loop Exit
 **********************
-Value in range but NOT found
+Value in range but NOT found, return index = -1
 
 TEST CASE 3, Search 888 in array [11 14 19 20 31 45 63 70 78]
-Array not valid or given value out of range
+Array not valid or given value out of range, return index = -1
 
 TEST CASE 4, Search 70 in array []
-Array not valid or given value out of range
+Array not valid or given value out of range, return index = -1
 ```
 

@@ -6,7 +6,7 @@ import (
 )
 
 func TestBinarySearch(t *testing.T) {
-	var testTable = []struct {
+	var testCaseTable = []struct {
 		arr []int // input array
 		target int //input target
 		expected int // expected output index
@@ -21,12 +21,12 @@ func TestBinarySearch(t *testing.T) {
 		{[]int{}, 70, -1},
 	}
 
-	for i, testcase := range testTable{
-		fmt.Printf("TEST CASE %v, Search %v in array %v\n", i+1, testcase.target, testcase.arr)
-		actual := BinarySearch(testcase.arr, testcase.target)
+	for i, c := range testCaseTable{
+		fmt.Printf("TEST CASE %v, Search %v in array %v\n", i+1, c.target, c.arr)
+		actual := BinarySearch(c.arr, c.target)
 		fmt.Println()
-		if actual != testcase.expected {
-			t.Errorf("BinarySearch(%v,%v) = %v; expected %v", testcase.arr, testcase.target, actual, testcase.expected)
+		if actual != c.expected {
+			t.Errorf("BinarySearch(%v,%v) = %v; expected %v", c.arr, c.target, actual, c.expected)
 		}
 	}
 }

@@ -10,7 +10,7 @@ func BinarySearch(arr []int, val int) (index int) {
 	low := 0
 	high := len(arr) - 1
 	if len(arr) == 0 || arr[low] > val || arr[high] < val {
-		fmt.Println("Array not valid or given value out of range")
+		fmt.Printf("Array not valid or given value out of range, return index = -1\n")
 		return -1
 	}
 
@@ -37,10 +37,10 @@ func BinarySearch(arr []int, val int) (index int) {
 	// 要么 arr[low] != val , value not found, return -1
 	fmt.Println("**********************")
 	if arr[low] == val {
-		fmt.Println("Value found")
+		fmt.Printf("Value found, return index = %v\n", low)
 		return low
 	} else {
-		fmt.Println("Value in range but NOT found")
+		fmt.Printf("Value in range but NOT found, return index = -1\n")
 		return -1
 	}
 }
